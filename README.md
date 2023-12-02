@@ -42,7 +42,7 @@ Then they can send the key by attaching the file to an E-Mail
 
 7. Now you can check if the person who signed the key was really your friend
 by typing:
-`gpg --list-sigs <user-id>`
+`gpg --list-sigs <user-id>` 
 User-id can be anything that appears in the uid row when the command gpg --list-keys is used
 
 
@@ -50,19 +50,24 @@ User-id can be anything that appears in the uid row when the command gpg --list-
 
 ### Collection of useful gpg commands
 
-sign a gpg key with
+- sign a gpg key with
 `gpg --sign-key <keyid>`
 
-list all users who signed a particular public key.
+- list all users who signed a particular public key.
 User-id can be anything that appears in the uid row
 when the command gpg --list-keys is used
 `gpg --list-sigs <user-id>`
 
-list all the public keys in the keyring
+- list all the public keys in the keyring
 `gpg --list-keys` 
 
-list all the private keys in keyring
+- list all the private keys in keyring
 `gpg --list-secret-keys`
 
-export the public key to a separate file
+- export the public key to a separate file
 `gpg --armor --export <key_fingerprint> > <public_key.asc>`
+
+- edit an already generated gpg key
+`gpg edit <key_fingerprint>`
+this will open a gpg console which accepts different commands. 
+`trust` will allow you to change the trust level of the chosen key
