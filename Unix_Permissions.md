@@ -20,6 +20,20 @@ The last field is the name of the object itself (file/folder)
 The integer representation of this permission will be: 644
 ```
 
+The permissions are defined as follows:
+```
+0   all permissions  | rwx  
+1   read and write   | rw- 
+2   read, execute    | r-x
+3   read only        | r--
+4   write, execute   | -wx
+5   write only       | -w-
+6   execute only     | --x
+7   no permissions   | ---
+```
+If the permission is set to high then it is disabled. That means a code like `123`
+would correspond to permissions `--x -w- -wx` or `--x-w--wx`
+
 The default permissions for newly created files are determined using a [UMASK](UMASK.md). A umask is a predefined value (sequence of integers) which will be subtracted from the original default permission values (usually 777 for files and 666 for folders).
 
 ### In order to change the permissions, the commands below are available:
