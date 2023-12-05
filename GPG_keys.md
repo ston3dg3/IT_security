@@ -38,13 +38,15 @@ your friend.
 6. Now your friend should export the public key again and send it back after they signed with
 their private key. They can export the key with:
 `gpg --armor --export <key_fingerprint> > <public_key.asc>`
-Then they can send the key by attaching the file to an E-Mail
+Then they can send the key back to you by attaching the file to an E-Mail
 
-7. Now you can check if the person who signed the key was really your friend
+7. You will need to update your local gpg key with the newly signed key from your friend by integrating it into your keyring. For that, use the gpg insert statement with the user ID that you specified in Step 1:
+`gpg -insert <user-id>`
+
+8. Now you can check if the person who signed the key was really your friend
 by typing:
 `gpg --list-sigs <user-id>` 
-User-id can be anything that appears in the uid row when the command gpg --list-keys is used
-
+If the key lists 2 signatures, one from you, and one from your friend, then you did everything correctly and should have a working gpg key which is trusted by 2 people.
 
 
 
