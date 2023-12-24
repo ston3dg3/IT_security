@@ -3,7 +3,6 @@
 
 
 
-
 ### Some SQL Injection attacks that could work when the table displayed on the webpage is 4 columns wide:
 
 view all column names of table members

