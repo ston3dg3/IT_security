@@ -132,4 +132,3 @@ sudo nmtui-connect <ESSID>
 
 
 
-
