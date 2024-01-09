@@ -2,8 +2,7 @@
 
 The four-way handshake is the process of exchanging the keys that will be used to encrypt the data between the client and the access point. It is a challenge-response handshake that is used to authenticate clients to the access point. The four-way handshake is initiated by the client, which sends a request to the access point. The access point responds with a challenge, which the client must then respond to with the correct answer.
 
-The four-way handshake is used to establish a shared secret between the client and the access point. This shared secret is used to encrypt all subsequent communications between the client and the access point. The four-way handshake is also used to establish a shared secret between the client and the access point.
-
+The four-way handshake is used to establish a shared secret between the client and the access point. This shared secret is used to encrypt all subsequent communications between the client and the access point.
 ## The Four Way Handshake
 ![I think there was supposed to be an image here...](4-WAY-handshake.png "4 Way Handshake Diagram")
 
