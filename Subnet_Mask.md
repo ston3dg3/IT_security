@@ -5,6 +5,7 @@ The subnet mask is a 32-bit number that specifies what portions of the IP addres
 The bits have the following meaning:
 - '1' bits represent the network portion of the IP address.
 - '0' bits represent the host portion of the IP address.
+
 The subnet mask must be contiguous. That is, all '1' bits must be on the left and all '0' bits must be on the right.
 When an IP address is combined with its subnet mask, the network and host portions are clearly defined. This division allows routers to determine which part of the IP address represents the destination network and which part represents the specific host within that network.
 
