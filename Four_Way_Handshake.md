@@ -7,7 +7,7 @@ The four-way handshake is used to establish a shared secret between the client a
 ## The Four Way Handshake
 ![I think there was supposed to be an image here...](4-WAY-handshake.png "4 Way Handshake Diagram")
 
-#### Pairwaise Transient Key (PTK)
+## Pairwaise Transient Key (PTK)
 **Pairwise Transient key** is used to encrypt all unicast traffic between a client station and the access point. PTK is unique between a client station and access point. To generate **PTK**, client device and access point need the following information.
 ```bash
 PTK = PRF (PMK + Anonce + SNonce + Mac (AA)+ Mac (SA))
@@ -30,3 +30,6 @@ Group master key is used in a 4-way handshake to create GTK discussed above. GTK
 ## Master Session Key (MSK)
 The master session is the first key which is generated either from 802.1X/EAP or derived from PSK authentication.
 
+
+## Structure of the keys
+![I think there was supposed to be an image here...](KeysHierarchy.png "The structure of the keys is depicted in the following pyramid diagram")
